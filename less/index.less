@@ -55,5 +55,148 @@ table {
 
 html, body {
     height: 100%;
+    font-size: 62.5%
 }
 
+.flex {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	@media (max-width: 500px) {
+		flex-direction: column;
+	}
+}
+
+@primary-bg: darkgray;
+@secondary-bg: slategray;
+@light-text: ivory;
+
+body {
+	/*background:  @primary-bg;*/
+	nav {
+		text-align: center;
+		margin: auto;
+		padding: 15px 0;
+		background: @secondary-bg;
+
+		a {
+			font-size: 1.6rem;
+			text-decoration: none;
+			color: @light-text;
+			margin: auto;
+		}
+
+		.flex();
+
+		@media (max-width: 500px) {
+			padding: 0;
+			background: white;
+			a {
+				background: @secondary-bg;
+				padding: 5px;
+				border-top: 1px solid @light-text;
+				width: 100%;
+			}
+			a:last-child {
+				border-bottom: 1px solid @light-text;
+			}
+		}
+	}
+
+	p {
+		font-size: 1.6rem;
+		line-height: 1.5;
+	}
+	header {
+
+		margin: 1%;
+		div {
+			flex-basis: 50%;
+		}
+		h1 {
+			font-size: 6rem;
+			text-align: center;
+			margin: 0 auto 10px;
+		}
+
+		img {
+			max-width: 40%;
+			margin: auto;
+			border-radius: 50%;
+		}
+
+		.flex();
+
+		@media (max-width: 500px) {
+			h1 {
+				font-size: 3.6rem;
+			}
+			img {
+				max-width: 70%;
+			}
+		}
+	}
+	main {
+
+		margin: 10px auto;
+		padding: 20px 10px;
+		border-top: 1px solid black;
+		/*border-bottom: 1px solid black;*/
+
+		section {
+			flex-basis: 45%;
+			margin: 10px auto;
+
+			h2 {
+				margin: 10px 0;
+				font-size: 2rem;
+			}
+
+			li {
+				font-size: 1.6rem;
+				padding: 3%;
+				border: 1px solid lightgray;
+				border-bottom: none;
+			}
+			li:last-child {
+
+				border-bottom: 1px solid lightgray;
+			}
+		}
+		#cases {
+			flex-basis: 100%;
+			table {
+				width: 100%;
+				font-size: 1.6rem;
+				text-align: center;
+				tr {
+					border-top: 1px solid gray;
+					td, th {
+						padding: 5px 0;
+					}
+				}
+				tr:last-child {
+					border-bottom: 1px solid gray;
+				}
+				tr:nth-child(even) {
+					background: @primary-bg + 50;
+				}
+			}
+		}
+		.flex();
+	}
+
+	footer {
+
+		padding: 20px 0;
+		background: @secondary-bg;
+
+		p {
+
+			color: @light-text;
+			text-align: center;
+			font-size: 1.4rem;
+
+		}
+	}
+}
