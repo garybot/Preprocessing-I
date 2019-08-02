@@ -134,7 +134,9 @@ html,
 body {
   height: 100%;
   font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
 }
+/* MIXINS */
 .flex {
   display: flex;
   flex-flow: row wrap;
@@ -145,6 +147,13 @@ body {
     flex-direction: column;
   }
 }
+.bordered {
+  border-top: solid 1px slategray;
+}
+.bordered:last-child {
+  border-bottom: solid 1px slategray;
+}
+/* VARIABLES */
 body {
   /*background:  @primary-bg;*/
 }
@@ -171,10 +180,8 @@ body nav a {
 @media (max-width: 500px) {
   body nav {
     padding: 0;
-    background: white;
   }
   body nav a {
-    background: slategray;
     padding: 5px;
     border-top: 1px solid ivory;
     width: 100%;
@@ -222,11 +229,13 @@ body header img {
 body main {
   margin: 10px auto;
   padding: 20px 10px;
-  border-top: 1px solid black;
-  /*border-bottom: 1px solid black;*/
+  border-top: solid 1px slategray;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+}
+body main:last-child {
+  border-bottom: solid 1px slategray;
 }
 body main section {
   flex-basis: 45%;
@@ -245,6 +254,11 @@ body main section li {
 body main section li:last-child {
   border-bottom: 1px solid lightgray;
 }
+@media (max-width: 500px) {
+  body main section {
+    margin: 10px 0;
+  }
+}
 body main #cases {
   flex-basis: 100%;
 }
@@ -254,17 +268,22 @@ body main #cases table {
   text-align: center;
 }
 body main #cases table tr {
-  border-top: 1px solid gray;
+  border-top: solid 1px slategray;
+}
+body main #cases table tr:last-child {
+  border-bottom: solid 1px slategray;
 }
 body main #cases table tr td,
 body main #cases table tr th {
   padding: 5px 0;
 }
-body main #cases table tr:last-child {
-  border-bottom: 1px solid gray;
-}
 body main #cases table tr:nth-child(even) {
   background: #dbdbdb;
+}
+@media (max-width: 500px) {
+  body main #cases {
+    margin: 20px 0;
+  }
 }
 @media (max-width: 500px) {
   body main {
