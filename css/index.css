@@ -245,6 +245,9 @@ body main section h2 {
   margin: 10px 0;
   font-size: 2rem;
 }
+body main section ul {
+  margin: 20px auto;
+}
 body main section li {
   font-size: 1.6rem;
   padding: 3%;
