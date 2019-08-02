@@ -1,1 +1,301 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
+}
+/* MIXINS */
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+@media (max-width: 500px) {
+  .flex {
+    flex-direction: column;
+  }
+}
+.bordered {
+  border-top: solid 1px slategray;
+}
+.bordered:last-child {
+  border-bottom: solid 1px slategray;
+}
+/* VARIABLES */
+body {
+  /*background:  @primary-bg;*/
+}
+body nav {
+  text-align: center;
+  margin: auto;
+  padding: 15px 0;
+  background: slategray;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+body nav a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: ivory;
+  margin: auto;
+}
+@media (max-width: 500px) {
+  body nav {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  body nav {
+    padding: 0;
+  }
+  body nav a {
+    padding: 5px;
+    border-top: 1px solid ivory;
+    width: 100%;
+  }
+  body nav a:last-child {
+    border-bottom: 1px solid ivory;
+  }
+}
+body p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+body header {
+  margin: 1%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+body header div {
+  flex-basis: 50%;
+}
+body header h1 {
+  font-size: 6rem;
+  text-align: center;
+  margin: 0 auto 10px;
+}
+body header img {
+  max-width: 40%;
+  margin: auto;
+  border-radius: 50%;
+}
+@media (max-width: 500px) {
+  body header {
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  body header h1 {
+    font-size: 3.6rem;
+  }
+  body header img {
+    max-width: 70%;
+  }
+}
+body main {
+  margin: 10px auto;
+  padding: 20px 10px;
+  border-top: solid 1px slategray;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+body main:last-child {
+  border-bottom: solid 1px slategray;
+}
+body main section {
+  flex-basis: 45%;
+  margin: 10px auto;
+}
+body main section h2 {
+  margin: 10px 0;
+  font-size: 2rem;
+}
+body main section li {
+  font-size: 1.6rem;
+  padding: 3%;
+  border: 1px solid lightgray;
+  border-bottom: none;
+}
+body main section li:last-child {
+  border-bottom: 1px solid lightgray;
+}
+@media (max-width: 500px) {
+  body main section {
+    margin: 10px 0;
+  }
+}
+body main #cases {
+  flex-basis: 100%;
+}
+body main #cases table {
+  width: 100%;
+  font-size: 1.6rem;
+  text-align: center;
+}
+body main #cases table tr {
+  border-top: solid 1px slategray;
+}
+body main #cases table tr:last-child {
+  border-bottom: solid 1px slategray;
+}
+body main #cases table tr td,
+body main #cases table tr th {
+  padding: 5px 0;
+}
+body main #cases table tr:nth-child(even) {
+  background: #dbdbdb;
+}
+@media (max-width: 500px) {
+  body main #cases {
+    margin: 20px 0;
+  }
+}
+@media (max-width: 500px) {
+  body main {
+    flex-direction: column;
+  }
+}
+body footer {
+  padding: 20px 0;
+  background: slategray;
+}
+body footer p {
+  color: ivory;
+  text-align: center;
+  font-size: 1.4rem;
+}
